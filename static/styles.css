@@ -1,76 +1,85 @@
 body {
-    background: linear-gradient(180deg, #00f0ff, #ff00ff);
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
+       background: linear-gradient(135deg, #0d1b2a, #1b263b);
+       color: #fff;
+       font-family: 'Arial', sans-serif;
+       margin: 0;
+       padding: 0;
+       overflow-x: hidden;
+   }
 
-.tabs {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.5);
-}
+   .tabs {
+       display: flex;
+       justify-content: space-around;
+       background: #1b263b;
+       padding: 10px 0;
+   }
 
-.tab {
-    padding: 10px;
-    flex: 1;
-    text-align: center;
-    border: none;
-    background: transparent;
-    color: #fff;
-    text-shadow: 0 0 10px #00f0ff;
-    cursor: pointer;
-}
+   .tab {
+       padding: 10px 20px;
+       cursor: pointer;
+       background: none;
+       border: none;
+       color: #fff;
+       font-size: 16px;
+       text-shadow: 0 0 5px #00f0ff, 0 0 10px #ff00ff;
+   }
 
-.tab.active {
-    background: rgba(255, 0, 255, 0.3);
-}
+   .tab.active {
+       background: linear-gradient(45deg, #00f0ff, #ff00ff);
+       text-shadow: none;
+   }
 
-.tab-content {
-    display: none;
-    width: 100%;
-    padding: 20px;
-}
+   .tab-content {
+       display: none;
+       padding: 20px;
+   }
 
-.tab-content.active {
-    display: block;
-}
+   .tab-content.active {
+       display: block;
+   }
 
-.coming-soon {
-    text-align: center;
-    font-size: 24px;
-    text-shadow: 0 0 10px #ff00ff;
-}
+   .swiper-container {
+       width: 100%;
+       max-width: 600px;
+       margin: 0 auto;
+   }
 
-#wheelCanvas {
-    display: block;
-    margin: 20px auto;
-}
+   .swiper-slide img {
+       width: 100%;
+       height: auto;
+       border-radius: 10px;
+       box-shadow: 0 0 10px #00f0ff, 0 0 20px #ff00ff;
+   }
 
-#spinButton, #myPrizes, #generateQr, #scanQr {
-    background: #00f0ff;
-    border: none;
-    padding: 10px 20px;
-    color: #000;
-    font-size: 16px;
-    border-radius: 5px;
-    text-shadow: 0 0 5px #ff00ff;
-    cursor: pointer;
-    margin: 10px;
-}
+   #wheelCanvas {
+       display: block;
+       margin: 20px auto;
+   }
 
-@media (max-width: 600px) {
-    .tab {
-        font-size: 14px;
-    }
-    #wheelCanvas {
-        width: 250px;
-        height: 250px;
-    }
-}
+   #spinButton, #myPrizes, #generateQr, #scanQr {
+       background: linear-gradient(45deg, #00f0ff, #ff00ff);
+       border: none;
+       padding: 10px 20px;
+       color: #fff;
+       font-size: 16px;
+       cursor: pointer;
+       border-radius: 5px;
+       margin: 10px;
+       text-shadow: 0 0 5px #000;
+   }
+
+   #timer, #profileInfo, #promoterStats, #prizesList {
+       text-align: center;
+       font-size: 18px;
+       text-shadow: 0 0 5px #00f0ff;
+   }
+
+   @media (max-width: 600px) {
+       .tab {
+           font-size: 14px;
+           padding: 8px 10px;
+       }
+       .swiper-container {
+           max-width: 100%;
+       }
+   }

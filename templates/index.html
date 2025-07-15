@@ -38,56 +38,49 @@
         return gk_fileData[filename] || "";
         }
         </script><!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewBB</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    <div class="tabs">
-        <button class="tab active" onclick="openTab('events')">Афиша</button>
-        <button class="tab" onclick="openTab('card')">Карта</button>
-        <button class="tab" onclick="openTab('wheel')">Рулетка</button>
-        <button class="tab" onclick="openTab('profile')">Профиль</button>
-    </div>
+   <html lang="ru">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>NewBB</title>
+       <link rel="stylesheet" href="/static/styles.css">
+       <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+       <script src="/static/app.js"></script>
+   </head>
+   <body>
+       <div class="tabs">
+           <button class="tab active" onclick="openTab('events')">Афиша</button>
+           <button class="tab" onclick="openTab('map')">Карта</button>
+           <button class="tab" onclick="openTab('roulette')">Рулетка</button>
+           <button class="tab" onclick="openTab('profile')">Профиль</button>
+       </div>
 
-    <!-- Вкладка Афиша -->
-    <div id="events" class="tab-content active">
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Динамически заполняется через JS -->
-            </div>
-            <div class="swiper-pagination"></div>
-        </divcomputationally generated HTML content
-        </div>
-    </div>
+       <div id="events" class="tab-content active">
+           <div class="swiper-container">
+               <div class="swiper-wrapper"></div>
+               <div class="swiper-pagination"></div>
+           </div>
+       </div>
 
-    <!-- Вкладка Карта -->
-    <div id="card" class="tab-content">
-        <div class="coming-soon">coming soon...</div>
-    </div>
+       <div id="map" class="tab-content">
+           <h2>Карта</h2>
+           <p style="text-align: center; font-size: 24px; text-shadow: 0 0 5px #00f0ff;">Coming soon...</p>
+       </div>
 
-    <!-- Вкладка Рулетка -->
-    <div id="wheel" class="tab-content">
-        <div id="timer"></div>
-        <canvas id="wheelCanvas" width="300" height="300"></canvas>
-        <button id="spinButton">Крутить</button>
-        <button id="myPrizes" style="display: none;">Мои призы</button>
-        <div id="prizesList" style="display: none;"></div>
-    </div>
+       <div id="roulette" class="tab-content">
+           <canvas id="wheelCanvas" width="300" height="300"></canvas>
+           <button id="spinButton">Крутить</button>
+           <div id="timer"></div>
+           <button id="myPrizes" style="display: none;">Мои призы</button>
+           <div id="prizesList" style="display: none;"></div>
+       </div>
 
-    <!-- Вкладка Профиль -->
-    <div id="profile" class="tab-content">
-        <div id="profileInfo"></div>
-        <button id="generateQr" style="display: none;">Сгенерировать QR-код</button>
-        <button id="scanQr" style="display: none;">Сканировать QR-код</button>
-        <div id="promoterStats" style="display: none;"></div>
-    </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="/static/app.js"></script>
-</body>
-</html>
+       <div id="profile" class="tab-content">
+           <div id="profileInfo"></div>
+           <div id="promoterStats" style="display: none;"></div>
+           <button id="generateQr" style="display: none;">Сгенерировать QR-код</button>
+           <button id="scanQr" style="display: none;">Сканировать QR-код</button>
+       </div>
+   </body>
+   </html>
